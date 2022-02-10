@@ -1,7 +1,7 @@
 // Modules
-import dotenv from 'dotenv'
 import * as banchojs from 'bancho.js'
 import omniscient from './omniscient'
+import dotenv from 'dotenv'
 import fs from 'fs'
 
 // Plugins
@@ -17,12 +17,11 @@ if (!process.env.IRC_USERNAME || !process.env.IRC_PASSWORD || !process.env.API_K
 const osuIRC = new banchojs.BanchoClient({ username: process.env.IRC_USERNAME, password: process.env.IRC_PASSWORD, apiKey: process.env.API_KEY, host: 'irc.ppy.sh', port: 6667 })
 
 // Events
-omniscient.emit('boot', omniscient)
+omniscient.emit('boot')
 osuIRC.connect().then(() => {
-    omniscient.emit('connect', osuIRC)
     osuIRC.on('PM', async instance => {
-        if (instance.self) omniscient.emit('reply', instance)
-        else omniscient.emit('pm', instance)
+        console.log(`[${instance.user.ircUsername}] ${instance.message}`)
+        if (!instance.self) return omniscient.emit('pm', instance)
     })
 })
 
