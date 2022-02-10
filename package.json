@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "bancho.js": "^0.9.7",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "osucolle": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.15"
