@@ -1,8 +1,16 @@
 import { PrivateMessage } from 'bancho.js'
-import omniscient from '../omniscient'
+import plugin from '../plugin'
 
-omniscient.on('pm', async (instance: PrivateMessage) => {
-    let cmd = instance.message.substring(1).split(' ')[0]
-    if (cmd === 'help' || cmd === 'h')
-        return instance.user.sendMessage('[https://github.com/AuracleTech/omniscient omniscient on GitHub]')
-})
+export const main: plugin = {
+    name: 'Help',
+    primordial: [],
+    events: {
+        'pm': [async (instance: PrivateMessage) => {
+            let cmd = instance.message.substring(1).split(' ')[0]
+            if (cmd === 'help' || cmd === 'h')
+                return instance.user.sendMessage('[https://github.com/AuracleTech/omniscient omniscient on GitHub]')
+        }]
+    },
+}
+
+export default main

@@ -15,9 +15,10 @@
   "author": "Auracle",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.0",
     "bancho.js": "^0.9.7",
     "dotenv": "^16.0.0",
-    "osucolle": "^1.0.2"
+    "osu-collection": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.15"
