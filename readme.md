@@ -1,7 +1,3 @@
-<style>
-gray {color:#a0a0a0 !important;}
-</style>
-
 ## omniscient
 
 This osu bot has no commands. Command are optional using the plugin folder
@@ -22,9 +18,9 @@ plugins
 
 `!f` or `!favorites`
 
-+ COLLECTION_PATH <gray>C:/Auracle/osu!/collection.db</gray>
-+ COLLECTION_NAMES <gray>Favorites,Tech,Other</gray>
-+ API_KEY <gray>0fb7e7bf6b4c2c830727a3b71c5bcd063192470d</gray>
++ `COLLECTION_PATH` C:/Auracle/osu!/collection.db
++ `COLLECTION_NAMES` Favorites,Tech,Other
++ `API_KEY` 0fb7e7bf6b4c2c830727a3b71c5bcd063192470d
 
 ---
 
